@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPS Data Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+		#map {
+			clear: left;
+			height: 100%;
+		}
+		#title {
+			text-align: center;
+			width: 420px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 0;
+			margin-bottom: 8px;
+			border-bottom-style: solid;
+			border-bottom-color: black;
+			border-bottom-width: 2px;
+			padding-top: 10px;
+			padding-bottom: 5px;
+			font-family: 'Open Sans', sans-serif;
+		}
+		#IDInput {
+			margin-left: auto;
+			margin-right: auto;
+			width: 250px;
+			padding: 0;
+			margin-bottom: 10px;
+			overflow: auto;
+		}
+		#IDText {
+			float: left;
+		}
+		#IDSubmit {
+			float: right;
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+    </style>
+  </head>
+  <body>
+	<h3 id="title">Yale MVMNT Experience Sampling GPS Analysis</h3>
+	<div id="IDInput">
+		<input type="text" id="IDText" placeholder="Enter the participant's ID...">
+		<button id="IDSubmit" onclick="getData()">Submit</button>
+	</div>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDipnoDGLjTVIAr9YSNXIcZElIAKPXby7U"
+    async defer></script>
+	<script src="js\gps_analysis.js"></script>
+  </body>
+</html>
